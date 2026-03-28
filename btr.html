@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btr studio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>BTR<span> STUDIO</span></h1>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking">Book Now</a>
+        </div>
+   
+    <!--mobile menu icon-->
+ 
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+
+        </div>
+        <div class="nav-wrap-mobile d-none">
+           <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking">Book Now</a>
+        </div>
+         </header>
+
+    <!--Homepage--
+    <section class="hero" id="home">
+        <div>
+            <h1>
+                Capturing Moments That Last Forever
+            </h1>
+            <button class="btn"
+            onclick="scrollToBooking()">
+                Book a Session
+            </button>
+        </div>
+
+    </section>
+-->
+
+    <!--background video-->
+    <section  class="hero" id="home">
+        <video autoplay muted loop plasyline class="hero-video">
+            <source src="images/vid.mp4" type="video/mp4">
+        </video>
+
+          <!--overlay content-->
+    <div class="hero-content">
+        <h1>
+                Capturing Moments That Last Forever
+            </h1>
+            <button class="btn"
+            onclick="scrollToBooking()">
+                Book a Session
+            </button>
+
+    </div>
+    
+
+    </section>
+
+  
+
+    <!--Portfolio-->
+    <section class="section" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="images/pic2.jpg">
+            <img src="images/pic4.jpg">
+            <img src="images/pic5.jpg">
+            <img src="images/pic6.jpg">
+
+        </div>
+    </section>
+
+    <!--About-->
+    <section class="section about" id="about">
+        <h2>About Me</h2>
+        <img src="images/pic3.jpg">
+        <p>
+            I am a passionate photopgrapher
+        </p>
+        <p>
+            5+ years of experience capturing memories.
+        </p>
+        <p>
+            My style is creative and natural
+        </p>
+    </section>
+
+    <!--Pricing-->
+    <section class="section" id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing">
+            <div class="card">
+                <h3>Basic</h3>
+                <p>₦30,000</p>
+            </div>
+            <div class="card">
+                <h3>Standard</h3>
+                <p> ₦50,000</p>
+            </div>
+            <div class="card">
+                <h3>Premium</h3>
+                <p>₦100,000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Booking-->
+    <section class="section" id="booking">
+        <h2>Book a Session</h2>
+        <form onsubmit="bookNow(event)">
+            <input type="text"
+            placeholder="Your Name"required>
+            <input type="date" required>
+            <select required>
+                <option value=""> Select Shoot Type</option>
+                <option>Birthday</option>
+                <option>Wedding</option>
+                <option>Portrait</option>
+                <option>Event</option>
+                <option>Studio</option>
+            </select>
+            <button class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!--Testimonials
+    <section class="section">
+        <h2>Testimonials</h2>
+        <p class="testimonial">"Amazing work!"</p>
+         <p class="testimonial">"Very professional!"</p>
+    </section>
+    -->
+
+     <section class="section"
+     id="testimonials">
+        <h2>What Our Clients says</h2>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"Amazing work! the photos came out perfect."</p>
+                <h4>Danny og</h4>
+                <div class="stars-testimony">
+                    <!--stars-->
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <div class="testimonial-card">
+                <p>"Very professional and delivered on time."</p>
+                <h4>Blessing</h4>
+                <div class="stars-testimony">
+                    <!--stars-->
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <div class="testimonial-card">
+                <p>"Best photography experience have ever had!"</p>
+                <h4>Happy</h4>
+                <div class="stars-testimony">
+                    <!--stars-->
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+
+                <div class="testimonial-card">
+                <p>"Great service and amazing quality pictures."</p>
+                <h4>Anita</h4>
+                <div class="stars-testimony">
+                    <!--stars-->
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--ratings-->
+    <section class="section" id="ratings">
+        <h2>Rate Our Service</h2>
+        <div class="stars" id="star-container">
+            <span onclick="rate(1)">&#9733;</span>
+            <span onclick="rate(2)">&#9733;</span>
+            <span onclick="rate(3)">&#9733;</span>
+            <span onclick="rate(4)">&#9733;</span>
+            <span onclick="rate(5)">&#9733;</span>
+
+        </div>
+        <p id="rating-text">Click to rate</p>
+
+    </section>
+
+    <section class="section" id="faq">
+        <h2>Frequently Ask Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">How do i book a session?
+            </button>
+            <div class="faq-answer">
+                <p>You can book through our booking form
+                    or contact us via whatsapp
+                </p>
+            </div>
+        </div>
+
+         <div class="faq-item">
+            <button class="faq-question">How long does it take to get photos?
+            </button>
+            <div class="faq-answer">
+                <p>Photos are delivered within 2-7 w0rking days.
+                </p>
+            </div>
+        </div>
+
+         <div class="faq-item">
+            <button class="faq-question">Do you travel for events?
+            </button>
+            <div class="faq-answer">
+                <p>Yes, we cover events both locally and outside the city.
+                </p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!--Contact-->
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p>Phone: +234 816 099 8408</p>
+        <p>Email: mystudio@gmail.com</p>
+        <p>Location: Opposite De joe hotel Obinomba ,Delta state</p>
+        <form onsubmit="contactForm(event)">
+
+        
+        <input type="text"
+        placeholder="Your Name" required>
+        <input type="email"
+        placeholder="Your Email"required>
+        <textarea placeholder="Message">
+        </textarea>
+        <button class="btn">
+            Send
+        </button>
+        </form>
+    </section>
+
+      <!--whatsapp-->
+    <a href="https://wa.me/2348160998408" class="whatsap-float"
+    target="_blank">
+    <span class="chat-text">Chat with us</span>
+    
+    <img src="images/whatsap.png"></a>
+
+
+    <!--promo pop up-->
+    <div class="popup" id="promo-popup">
+        <div class="popup-content">
+            <span class="close-btn"
+            onclick="closePopup()">&times;</span>
+            <h2>Special 0ffer!</h2>
+            <P>Get 10% off your first photoshoot</P>
+            <button class="btn"
+            onclick="scrollToBooking()">
+            Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>Follow us:  Instagram | Facebook | Tiktok |</p>
+        <p>&copy; 2025 All Right Reserved</p>
+    </footer>
+
+    <script src="java.js">
+
+    </script>
+</body>
+</html>
